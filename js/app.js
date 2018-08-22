@@ -2,6 +2,23 @@
  * Create a list that holds all of your cards
  */
 
+//  creates an empty array of cards to be suffled
+var cards = [];
+
+//  get a list of <i> elements whose immediate parent element has the class "card"
+//  https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
+const allCards = document.querySelectorAll('.card > i');
+
+// fills the array cards with the class names of i elements
+for (let i= 0; i<allCards.length; i++ ){
+  const singleCardClassName = allCards[i].className;
+  cards.push(singleCardClassName);
+}
+ //checking if the card array ist filled with the wright information
+const myPara = document.createElement('i');
+myPara.className = "fa fa-diamond";
+myPara.textContent = ('cards:'+ cards) ;
+document.body.appendChild(myPara);
 
 /*
  * Display the cards on the page
@@ -25,6 +42,16 @@ function shuffle(array) {
     return array;
 }
 
+// shuffle the list of cards using the provided "shuffle" method
+shuffle(cards);
+// function displayCards {};
+/*for (let i= 0; i<allCards.length; i++ ){
+  allCards[i].className = cards[i];
+}*/
+//checking if the card array ist shuffled
+const myPara2 = document.createElement('i');
+myPara2.textContent = ('shuffled:'+ cards) ;
+document.body.appendChild(myPara2);
 
 /*
  * set up the event listener for a card. If a card is clicked:
