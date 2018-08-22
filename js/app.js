@@ -3,29 +3,25 @@
  */
 
 //  creates an empty array of cards to be suffled
-var cards = [];
+const cards = [];
 
 //  get a list of <i> elements whose immediate parent element has the class "card"
-//  https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
+//  see dokumentation: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
 const allCards = document.querySelectorAll('.card > i');
 
-// fills the array cards with the class names of i elements
+// TODO fills the array cards with the class names of i elements
 for (let i= 0; i<allCards.length; i++ ){
   const singleCardClassName = allCards[i].className;
   cards.push(singleCardClassName);
 }
+
  //checking if the card array ist filled with the wright information
+/*
 const myPara = document.createElement('i');
 myPara.className = "fa fa-diamond";
 myPara.textContent = ('cards:'+ cards) ;
 document.body.appendChild(myPara);
-
-/*
- * Display the cards on the page
- *   - shuffle the list of cards using the provided "shuffle" method below
- *   - loop through each card and create its HTML
- *   - add each card's HTML to the page
- */
+*/
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
@@ -42,16 +38,37 @@ function shuffle(array) {
     return array;
 }
 
-// shuffle the list of cards using the provided "shuffle" method
-shuffle(cards);
-// function displayCards {};
-/*for (let i= 0; i<allCards.length; i++ ){
+/*
+ * Display the cards on the page
+ *   - shuffle the list of cards using the provided "shuffle" method below
+ *   - loop through each card and create its HTML
+ *   - add each card's HTML to the page
+ */
+
+// displayCards function
+// loop through each card and create its HTML
+// add each card's HTML to the page
+
+function displayCards() {
+for (let i= 0; i<allCards.length; i++ ){
   allCards[i].className = cards[i];
-}*/
+}
+};
+
+// TODO shuffle the list of cards using the provided "shuffle" method
+shuffle(cards);
+
+//TODO loop through each card and create its HTML
+//TODO add each card's HTML to the page
+displayCards();
+
+
 //checking if the card array ist shuffled
+/*
 const myPara2 = document.createElement('i');
 myPara2.textContent = ('shuffled:'+ cards) ;
 document.body.appendChild(myPara2);
+*/
 
 /*
  * set up the event listener for a card. If a card is clicked:
