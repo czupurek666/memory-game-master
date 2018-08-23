@@ -4,6 +4,7 @@
 
 //  creates an empty array of cards to be suffled
 const cards = [];
+const openCardsClass= [];
 
 //  get a list of <i> elements whose immediate parent element has the class "card"
 //  see dokumentation: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
@@ -38,13 +39,6 @@ function shuffle(array) {
     return array;
 }
 
-/*
- * Display the cards on the page
- *   - shuffle the list of cards using the provided "shuffle" method below
- *   - loop through each card and create its HTML
- *   - add each card's HTML to the page
- */
-
 // displayCards function
 // loop through each card and create its HTML
 // add each card's HTML to the page
@@ -69,12 +63,23 @@ document.getElementById('deck').addEventListener('click',cardDisplay);
 function cardDisplay(evt) {
   if (evt.target.className === 'card'){
     evt.target.className = 'card open show';
-  }
+    addToOpenCards(evt);
+    }
     //alert ("Hello World!");
 }
+//add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)
+function addToOpenCards (crd){
+  const openedCard = crd.className;
+  openCardsClass.push(crd);
+  }
+
+  const myPara3 = document.createElement('i');
+  myPara3.textContent = ('cards:'+ openCards);
+  document.body.appendChild(myPara3);
+
 
 /*
- * set up the event listener for a card. If a card is clicked:
+{} * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
  *  - add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)
  *  - if the list already has another card, check to see if the two cards match
