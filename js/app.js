@@ -62,13 +62,16 @@ shuffle(cards);
 //TODO add each card's HTML to the page
 displayCards();
 
+//TODO event listener for a card. If a card is clicked:
+document.getElementById('deck').addEventListener('click',cardDisplay);
 
-//checking if the card array ist shuffled
-/*
-const myPara2 = document.createElement('i');
-myPara2.textContent = ('shuffled:'+ cards) ;
-document.body.appendChild(myPara2);
-*/
+//display the card's symbol (put this functionality in another function that you call from this one)
+function cardDisplay(evt) {
+  if (evt.target.className === 'card'){
+    evt.target.className = 'card open show';
+  }
+    //alert ("Hello World!");
+}
 
 /*
  * set up the event listener for a card. If a card is clicked:
