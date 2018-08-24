@@ -49,15 +49,19 @@ for (let i= 0; i<allCards.length; i++ ){
 }
 }
 
+function cardSymbolDisplay(evt){
+if (evt.target.className === 'card'){
+  evt.target.className = 'card open show';
+}
+}
 
-//display the card's symbol (put this functionality in another function that you call from this one)
 function cardDisplay(evt) {
-  if (evt.target.className === 'card'){
-    evt.target.className = 'card open show';
-    //add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)
-    // TODO fills the array  with the class names of i elements
-    pushToArray (openedCard, openCardsClass);
-    }
+  //display the card's symbol (put this functionality in another function that you call from this one)
+  cardSymbolDisplay(evt)
+  //add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)
+  // TODO fills the array  with the class names of i elements
+  pushToArray (openedCard, openCardsClass);
+
 }
 
 // TODO fills the array cards with the class names of i elements
