@@ -1,16 +1,13 @@
 //  creates an empty array of cards to be suffled
 const cards = [];
 //  creates an empty array of cards that are oppened
-const openCardsClass = [];
-let move = 0;
+const openCardsClass= [];
 
 //  get a list of <i> elements whose immediate parent element has the class "card"
 //  see dokumentation: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
 const allCards = document.querySelectorAll('.card > i');
-let cardsMached =0;
 //const openedCard = document.querySelectorAll('.show > i');
-
-
+const openedCard = document.querySelectorAll('.show > i');
 
 /*
 * @description changing a list of cards into array of card classes
@@ -24,7 +21,7 @@ for (let i= 0; i<crd.length; i++ ){
   arr.push(singleCardClassName);
 }
 return arr;
-};
+}
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
@@ -37,8 +34,9 @@ function shuffle(array) {
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
     }
+
     return array;
-};
+}
 
 /*
 * @description loop through each card and create its HTML
@@ -48,77 +46,18 @@ function displayBlankCards() {
 for (let i= 0; i<allCards.length; i++ ){
   allCards[i].className = cards[i];
 }
-};
-
-function cardSymbolDisplay(evt){
-if (evt.target.className === 'card'){
-  evt.target.className = 'card open show';
-}
-};
-
-function openedCardPushToArray (evt){
-  const cd = evt.target.firstElementChild;
-    if (evt.target.className != 'deck'){
-      const cdClassName = cd.className;
-      openCardsClass.push(cdClassName);
-    }
-};
-
-function cardsMatchFunction (){
-    openCardsClass.length = 0;
-    //lock the cards in the open position
-    // .className = 'card match';
-    let openedCard = document.querySelectorAll('.show'); //NodeList [ i.fa.fa-paper-plane-o, i.fa.fa-leaf ] ('.show > i')
-    openedCard[0].className = 'card match';
-    openedCard[1].className = 'card match';
-    cardsMached ++;
-};
-
-function cardsNotMatchFunction (){
-    // remove the cards from the list
-    openCardsClass.length = 0;
-    //alert('cards do not match');
-    // hide the card's symbol
-    //PROBLEM
-    let openedCard = document.querySelectorAll('.show'); //NodeList [ i.fa.fa-paper-plane-o, i.fa.fa-leaf ] ('.show > i')
-    openedCard[0].className = 'card';
-    openedCard[1].className = 'card';
-};
-
-function moveCounter (){
-  move ++;
-  document.getElementById('moves').textContent = move;
-};
-
-function winning(){
-  if (cardsMached== 8){
-    alert('congratulations');
-  }
 }
 
 
+//display the card's symbol (put this functionality in another function that you call from this one)
 function cardDisplay(evt) {
-  //display the card's symbol (put this functionality in another function that you call from this one)
-  cardSymbolDisplay(evt);
-  //add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)
-  // TODO fills the array  with the class names of opened cards
-  openedCardPushToArray (evt);
-  // if the list already has another card, check to see if the two cards match
-  if (openCardsClass.length > 1){
-      if(openCardsClass[0] === openCardsClass[1]){
-      cardsMatchFunction ();
-      }
-    // if the cards do match, lock the cards in the open position (put this functionality in another function that you call from this one)
-    // if the cards do not match, remove the cards from the list and hide the card's symbol (put this functionality in another function that you call from this one)
-    setTimeout(function() {
-      cardsNotMatchFunction ();
-    }, 1000);
+  if (evt.target.className === 'card'){
+    evt.target.className = 'card open show';
+    //add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)
+    // TODO fills the array  with the class names of i elements
+    pushToArray (openedCard, openCardsClass);
+    }
 }
-  moveCounter ();
-  winning();
-}
-
-
 
 // TODO fills the array cards with the class names of i elements
 pushToArray (allCards, cards);
