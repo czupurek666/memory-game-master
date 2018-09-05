@@ -143,16 +143,14 @@ function resultsInModal(){
       const animatedStars = document.createElement('i');
        animatedStars.className = 'fa fa-star';
        starsResultContainer.appendChild(animatedStars);
-
     }
   }
-
-  }
+}
 
 
 function winning(){
 
-  if (cardsMached== 2){
+  if (cardsMached== 8){
     winningTrue = true;
     resultsInModal();
 
