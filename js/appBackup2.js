@@ -126,36 +126,28 @@ function moveCounter (){
   }
 };
 
-function resultsInModal(){
-  // reading the Time and placing it in Modal
-  finnalTimme = spanTime.innerHTML
-  document.getElementsByClassName('resultTime')[0].textContent = (finnalTimme);
-  // reading the stars result and placing it in Modal
-  finnalStarsConteiner = document.querySelector('.stars');
-  finnalStars = finnalStarsConteiner.querySelectorAll('i');
-  starsResultContainer = document.querySelector('.resultStars');
-
-
-
-
-  for (let i=0; i < finnalStars.length; i++){
-    if (finnalStars[i].className === 'fa fa-star'){
-      const animatedStars = document.createElement('i');
-       animatedStars.className = 'fa fa-star';
-       starsResultContainer.appendChild(animatedStars);
-
-    }
-  }
-
-  }
-
-
 function winning(){
 
   if (cardsMached== 2){
     winningTrue = true;
-    resultsInModal();
+    // reading the Time and placing it in Modal
+    finnalTimme = spanTime.innerHTML
+    document.getElementsByClassName('resultTime')[0].textContent = (finnalTimme);
+    // reading the stars result and placing it in Modal
+    finnalStarsConteiner = document.querySelector('.stars');
+    finnalStars = finnalStarsConteiner.querySelectorAll('i');
+    starsResultContainer = document.querySelector('.resultStars');
+    for (let i=0; i < finnalStars.length; i++){
+      if (finnalStars[i].className === 'fa fa-star'){
 
+      //problem
+       const animatedStars = document.createElement('i');
+       //animatedStars.textContent= 'dupa' + i;
+       animatedStars.className = 'fa fa-star';
+       starsResultContainer.appendChild(animatedStars);
+      }
+
+    }
 
     //displaying the Modal:
     modal.style.display = "block"
