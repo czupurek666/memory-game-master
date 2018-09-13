@@ -1,0 +1,100 @@
+@media screen and (max-width: 600px) {
+  .deck {
+      width: 100%;
+      min-height: 580px;
+      /*background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);*/
+      padding: 7%;
+  }
+
+  .deck .card {
+      height: 105px;
+      width: 105px;
+      border-style: solid;
+      border-width: 3px 3px 2px 4px;
+      box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .deck {
+      width: 100%;
+      min-height: 500px;
+      /*background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);*/
+      padding: 7%;
+  }
+
+  .deck .card {
+      height: 95px;
+      width: 95px;
+      border-style: solid;
+      border-width: 3px 3px 2px 4px;
+      box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+  }
+}
+@media screen and (max-width: 480px) {
+  .deck {
+      width: 100%;
+      min-height: 500px;
+      /*background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);*/
+      padding: 7%;
+  }
+
+  .deck .card {
+      height: 85px;
+      width: 85px;
+      border-style: solid;
+      border-width: 3px 3px 2px 4px;
+      box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .deck {
+      width: 100%;
+      min-height: 500px;
+      /*background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);*/
+      padding: 5%;
+  }
+
+  .deck .card {
+      height: 80px;
+      width: 80px;
+      border-style: solid;
+      border-width: 3px 3px 2px 4px;
+      box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .deck {
+      width: 100%;
+      min-height: 500px;
+      /*background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);*/
+      padding: 5%;
+  }
+
+  .deck .card {
+      height: 70px;
+      width: 70px;
+      border-style: solid;
+      border-width: 3px 3px 2px 4px;
+      box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .deck {
+      width: 100%;
+      min-height: 500px;
+      /*background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);*/
+      padding: 5%;
+  }
+
+  .deck .card {
+      height: 60px;
+      width: 60px;
+      border-style: solid;
+      border-width: 3px 3px 2px 4px;
+      box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+  }
+}

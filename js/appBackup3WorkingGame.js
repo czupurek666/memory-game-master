@@ -7,8 +7,6 @@
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
     <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet">
 </head>
 <body>
 
@@ -24,8 +22,8 @@
         		<li><i class="fa fa-star"></i></li>
         	</ul>
 
-        	<span id ="moves" class="moves">Move: 0</span>
-          <span id = "time" class="time"></span>
+        	<span id ="moves" class="moves">0</span>
+          <span id = "time" class="time"> </span>
 
             <div id ="restart" class="restart">
         		<i class="fa fa-repeat"></i>
@@ -96,7 +94,7 @@
           <p>Congratulations!</p>
           <p>You&acute;ve won this game!</p>
           <p class='resultTime'></p>
-          <p class = 'resultStars'></p>
+          <ul class = 'resultStars'></ul>
         </div>
     </div>
 
