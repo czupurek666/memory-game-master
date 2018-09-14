@@ -1,0 +1,73 @@
+@media screen and (max-width: 600px) {
+  .deck {
+      width: 100%;
+      padding: 7%;
+  }
+
+  .deck .card {
+      height: 18%;
+      width: 18%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .deck {
+    }
+
+  .deck .card {
+
+      box-shadow: 3px 2px 15px 0 rgba(46, 61, 73, 0.5);
+  }
+}
+@media screen and (max-width: 480px) {
+  .deck {
+  }
+
+  .deck .card {
+
+      border-style: solid;
+      border-width: 2px 2px 1px 3px;
+      box-shadow: 3px 2px 10px 0 rgba(46, 61, 73, 0.5);
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .deck {
+      padding: 5%;
+  }
+
+  .deck .card {
+
+      border-style: solid;
+      border-width: 2px 2px 1px 3px;
+      box-shadow: 3px 2px 10px 0 rgba(46, 61, 73, 0.5);
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .deck {
+
+
+  }
+
+  .deck .card {
+
+      border-style: solid;
+      border-width: 2px 2px 1px 3px;
+      box-shadow: 2px 2px 5px 0 rgba(46, 61, 73, 0.5);
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .deck {
+
+
+  }
+
+  .deck .card {
+
+      border-style: solid;
+      border-width: 2px 2px 1px 3px;
+      box-shadow: 2px 2px 5px 0 rgba(46, 61, 73, 0.5);
+  }
+}

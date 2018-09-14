@@ -138,10 +138,10 @@ function moveCounter (){
   if (move >= 20 ){
     stars[2].className= 'fa fa-star-o';
 // if more than 30 moves have been made the user loses secound star
-      if (move >= 30 ){
+      if (move >= 40 ){
         stars[1].className= 'fa fa-star-o';
 // if more than 50 moves have been made the user loses third star
-          if (move >= 50 ){
+          if (move >= 60 ){
             stars[0].className= 'fa fa-star-o';
           }
       }
